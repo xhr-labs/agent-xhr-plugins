@@ -113,9 +113,9 @@ junction.
 Local development uses the junction. On every `v*` tag of `xhr-assistant`,
 its `publish-marketplace` release job force-pushes one orphan branch per
 platform into this repository — `release/windows-x64`, `release/linux-x64`,
-`release/linux-arm64`, `release/macos-x64`, `release/macos-arm64` — each
-holding a single commit: the marketplace catalogs plus the materialized
-plugin package at `plugins/xhr-assistant`.
+`release/linux-arm64`, `release/macos-arm64` — each holding a single
+commit: the marketplace catalogs plus the materialized plugin package at
+`plugins/xhr-assistant`.
 
 Consequences:
 
