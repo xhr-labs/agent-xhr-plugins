@@ -101,6 +101,19 @@ claude plugin marketplace add xhr-labs/agent-xhr-plugins#release/windows-x64
 claude plugin install xhr-assistant@xhr
 ```
 
+```bash
+# Antigravity / agy CLI (no marketplace support; the package registers itself)
+git clone -b release/windows-x64 https://github.com/xhr-labs/agent-xhr-plugins xhr-marketplace
+xhr-marketplace/plugins/xhr-assistant/bin/xhr-assistant.exe install antigravity
+```
+
+The Antigravity installer writes the MCP server entry into
+`~/.gemini/config/mcp_config.json` (shared by the IDE, the agy CLI, and the
+SDK) and copies the `xhr-*` skills into `~/.gemini/skills/`. Restart
+Antigravity afterwards; re-run the same command after updating the clone,
+and use `uninstall antigravity` to remove the registration. Requires plugin
+release v0.1.9 or newer.
+
 Restart the host or open a new session after installation. On the first xHR
 action, the plugin returns the exact `auth token` command for its installed
 binary: generate an access token in xHR Platform, run that command, paste the
