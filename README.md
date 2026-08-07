@@ -75,30 +75,45 @@ claude plugin marketplace remove xhr
 Do not use `codex mcp add` or `claude mcp add`; the MCP server is installed
 together with the plugin's skills and runtime.
 
-## Internal end-user installation
+## End-user installation
 
-Once this repository is published and `plugins/xhr-assistant` contains a real
-platform-specific release package, an internal user installs it from Git:
+Pick the release branch matching your platform:
+
+| Platform | Release branch |
+|---|---|
+| Windows x64 | `release/windows-x64` |
+| Linux x64 | `release/linux-x64` |
+| Linux arm64 | `release/linux-arm64` |
+| macOS (Apple Silicon) | `release/macos-arm64` |
+
+Add the marketplace at that branch, then install the plugin. Windows
+examples — replace the branch name on other platforms:
 
 ```bash
 # Codex
-codex plugin marketplace add xhr-labs/agent-xhr-plugins --ref <release-ref>
+codex plugin marketplace add xhr-labs/agent-xhr-plugins --ref release/windows-x64
 codex plugin add xhr-assistant@xhr
 ```
 
 ```bash
-# Claude Code
-claude plugin marketplace add xhr-labs/agent-xhr-plugins
+# Claude Code (no --ref flag; the branch goes in a #fragment)
+claude plugin marketplace add xhr-labs/agent-xhr-plugins#release/windows-x64
 claude plugin install xhr-assistant@xhr
 ```
 
-The user may alternatively install `xhr-assistant` from marketplace `xhr`
-through `/plugins` in Codex CLI, the Plugins Directory in the Codex desktop
-app, or the `/plugin` command in Claude Code.
+Restart the host or open a new session after installation. On the first xHR
+action, the plugin returns the exact `auth token` command for its installed
+binary: generate an access token in xHR Platform, run that command, paste the
+token into the hidden prompt, and retry. The token lives in the OS credential
+store and is shared by both hosts on the same machine.
 
-`<release-ref>` must be replaced with the immutable release branch or tag
-before these commands are published to end users. The local development
-folder is named `xhr-plugins`; the Git repository is
+Do not add the marketplace without a branch: the default branch carries only
+the catalogs, so plugin installation fails with "Source path does not exist".
+Release branches always hold the latest release; to update, run the host's
+marketplace update command (`codex plugin marketplace upgrade xhr` /
+`claude plugin marketplace update xhr`) and reinstall the plugin.
+
+The local development folder is named `xhr-plugins`; the Git repository is
 `xhr-labs/agent-xhr-plugins`.
 
 ## Public end-user installation
