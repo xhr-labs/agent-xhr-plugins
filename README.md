@@ -82,13 +82,13 @@ platform-specific release package, an internal user installs it from Git:
 
 ```bash
 # Codex
-codex plugin marketplace add <owner>/xhr-plugins --ref <release-ref>
+codex plugin marketplace add xhr-labs/agent-xhr-plugins --ref <release-ref>
 codex plugin add xhr-assistant@xhr
 ```
 
 ```bash
 # Claude Code
-claude plugin marketplace add <owner>/xhr-plugins
+claude plugin marketplace add xhr-labs/agent-xhr-plugins
 claude plugin install xhr-assistant@xhr
 ```
 
@@ -96,8 +96,10 @@ The user may alternatively install `xhr-assistant` from marketplace `xhr`
 through `/plugins` in Codex CLI, the Plugins Directory in the Codex desktop
 app, or the `/plugin` command in Claude Code.
 
-The placeholders must be replaced with the actual Git owner and immutable
-release branch or tag before these commands are published to end users.
+`<release-ref>` must be replaced with the immutable release branch or tag
+before these commands are published to end users. The local development
+folder is named `xhr-plugins`; the Git repository is
+`xhr-labs/agent-xhr-plugins`.
 
 ## Public end-user installation
 
