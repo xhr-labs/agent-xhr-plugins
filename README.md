@@ -102,10 +102,19 @@ claude plugin install xhr-assistant@xhr
 ```
 
 ```bash
-# Antigravity / agy CLI (no marketplace support; the package registers itself)
+# Antigravity / agy CLI on Windows (no marketplace support; the package registers itself)
 git clone -b release/windows-x64 https://github.com/xhr-labs/agent-xhr-plugins xhr-marketplace
 xhr-marketplace/plugins/xhr-assistant/bin/xhr-assistant.exe install antigravity
 ```
+
+```bash
+# Antigravity / agy CLI on macOS (Apple Silicon) and Linux
+git clone -b release/macos-arm64 https://github.com/xhr-labs/agent-xhr-plugins xhr-marketplace
+./xhr-marketplace/plugins/xhr-assistant/bin/xhr-assistant install antigravity
+```
+
+The binary is `bin\xhr-assistant.exe` on Windows and `bin/xhr-assistant` on
+macOS/Linux — pick the release branch AND the binary name for your platform.
 
 The Antigravity installer writes the MCP server entry into
 `~/.gemini/config/mcp_config.json` (shared by the IDE, the agy CLI, and the
