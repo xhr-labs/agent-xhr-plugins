@@ -127,7 +127,16 @@ Restart the host or open a new session after installation. On the first xHR
 action, the plugin returns the exact `auth token` command for its installed
 binary: generate an access token in xHR Platform, run that command, paste the
 token into the hidden prompt, and retry. The token lives in the OS credential
-store and is shared by both hosts on the same machine.
+store and is shared by every host on the same machine.
+
+Installations target production by default. To point at another environment
+(requires plugin v0.1.11+), run the bundled CLI once after installing, then
+restart the session and authenticate with a token from that environment:
+
+```bash
+xhr-assistant config set-env sandbox   # or: dev, prod
+xhr-assistant config set-url <url>     # any custom base URL
+```
 
 Do not add the marketplace without a branch: the default branch carries only
 the catalogs, so plugin installation fails with "Source path does not exist".
