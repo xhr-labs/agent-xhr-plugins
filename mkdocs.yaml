@@ -1,5 +1,5 @@
-site_name: Root docs
-repo_url: https://github.com/
+site_name: xHR Plugins Marketplace
+repo_url: https://github.com/xhr-labs/agent-xhr-plugins
 edit_uri: edit/main/docs
 
 nav:
