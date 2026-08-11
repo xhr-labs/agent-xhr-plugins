@@ -42,9 +42,12 @@ codex plugin add xhr-assistant@xhr
 ### Google Antigravity (IDE or agy CLI)
 
 ```bash
-git clone -b release/windows-x64 https://github.com/xhr-labs/agent-xhr-plugins xhr-assistant-plugin
-xhr-assistant-plugin/plugins/xhr-assistant/bin/xhr-assistant.exe install antigravity
+git clone --depth 1 --single-branch -b release/windows-x64 https://github.com/xhr-labs/agent-xhr-plugins
+agent-xhr-plugins/plugins/xhr-assistant/bin/xhr-assistant.exe install antigravity
 ```
+
+(`--depth 1 --single-branch` downloads only your platform's package instead
+of every platform.)
 
 > No git? Download the branch as a ZIP instead (**Code → Download ZIP** on
 > the branch page), extract it, and point the same commands at the extracted
@@ -97,8 +100,7 @@ New releases land on the same branches, so updating is:
 ```bash
 # Claude Code
 claude plugin marketplace update xhr
-claude plugin uninstall xhr-assistant@xhr
-claude plugin install xhr-assistant@xhr
+claude plugin update xhr-assistant@xhr
 ```
 
 ```bash
@@ -109,8 +111,8 @@ codex plugin add xhr-assistant@xhr
 
 ```bash
 # Antigravity — pull the clone, then re-run the installer
-git -C xhr-assistant-plugin pull
-xhr-assistant-plugin/plugins/xhr-assistant/bin/xhr-assistant.exe install antigravity
+git -C agent-xhr-plugins pull
+agent-xhr-plugins/plugins/xhr-assistant/bin/xhr-assistant.exe install antigravity
 ```
 
 Restart your assistant afterwards.
@@ -131,7 +133,7 @@ codex plugin marketplace remove xhr
 
 ```bash
 # Antigravity
-xhr-assistant-plugin/plugins/xhr-assistant/bin/xhr-assistant uninstall antigravity
+agent-xhr-plugins/plugins/xhr-assistant/bin/xhr-assistant uninstall antigravity
 ```
 
 ## Troubleshooting
