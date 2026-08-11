@@ -1,37 +1,41 @@
-#  TechDocs
+# xHR Plugins Marketplace
 
+This repository distributes **xHR Assistant** — the plugin that lets AI
+assistants (Claude Code, OpenAI Codex, and Google Antigravity) work with an
+xHR workspace through natural conversation: leave balances, time off,
+timesheets and shifts, employee and document lookup, Workbench projects, and
+20+ other product domains.
 
-    ## What is this?
+## How distribution works
 
-    This is a placeholder TechDocs page. Here you will write your technical documentation for your software. This supports markdown, so get styling!
+```mermaid
+graph LR
+    A[xhr-assistant source] -->|tag v*| B[Release pipeline]
+    B --> C[release/windows-x64]
+    B --> D[release/linux-x64]
+    B --> E[release/linux-arm64]
+    B --> F[release/macos-arm64]
+    C & D & E & F -->|marketplace add / clone| G[End user]
+```
 
-    ## Some Cool Features
+- The **default branch** holds only the marketplace catalogs and the README.
+- Each **`release/<platform>` branch** holds exactly one commit with the
+  latest packaged plugin for that platform: the self-contained MCP binary,
+  the router skills, and the vendored execution runtime. Users need no
+  Python, no Git access to source repositories, and no build step.
+- The per-version archive history lives in the GitHub Releases of the
+  (private) plugin source repository.
 
-    ### Mermaid Diagrams
+## Installing
 
-    ```mermaid
-    %%{init: {'theme': 'forest'}}%%
-    graph LR
-    A[Start] --> B{Error?};
-    B -->|Yes| C[Hmm...];
-    C --> D[Debug];
-    D --> B;
-    B ---->|No| E[Yay!];
-    ```
+See the [README](https://github.com/xhr-labs/agent-xhr-plugins#readme) for
+the full end-user guide: platform picker, per-host install commands,
+first-time sign-in, environment switching, updating, and troubleshooting.
 
-    ### Graphviz Graphs
-    
-    ```dot
-    digraph G {
-        rankdir=LR
-        Earth [peripheries=2]
-        Mars
-        Earth -> Mars
-    }
-    ```
+## Security model in one paragraph
 
-    ### Additional Reading
-
-    - [MKDocs: Writing your docs](https://www.mkdocs.org/user-guide/writing-your-docs/)
-    - [Python Markdown](https://python-markdown.github.io/)
-
+The plugin exposes three managed MCP tools (`read`, `exec`, `authenticate`).
+Access tokens are validated against xHR Platform and stored only in the OS
+credential store; identity and tenant scope are re-verified server-side on
+every execution. The AI model never sees credentials, and header-like
+arguments are rejected at the tool contract.

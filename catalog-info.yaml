@@ -1,14 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{ parameters.repoName }}
-  title: ${{-parameters.reponame-}}
+  name: agent-xhr-plugins
+  title: xHR Plugins Marketplace
   description: Plugin marketplace catalog for xHR agent plugins, installable by both OpenAI Codex and Claude Code from a single repository. Distributes packaged plugins (currently xHR Assistant) to end users without exposing plugin source repositories.
   annotations:
-    github.com/project-slug: xhr-plugins
-    backstage.io/techdocs-ref: dir:. 
-    
-    
+    github.com/project-slug: xhr-labs/agent-xhr-plugins
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - marketplace
+    - plugin-catalog
+    - ai-agent
+    - distribution
 spec:
   type: service
   owner: group:default/ai-analytics
