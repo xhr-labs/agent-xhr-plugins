@@ -1,0 +1,3 @@
+# Local development junction. Release automation materializes a versioned
+# plugin package here instead of committing the linked source repository.
+plugins/xhr-assistant/
