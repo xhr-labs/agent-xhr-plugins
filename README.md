@@ -32,14 +32,14 @@ artifact.
 Codex:
 
 ```powershell
-codex plugin marketplace add C:\Users\TyLe\work\xhr\xhr-plugins
+codex plugin marketplace add C:\work\xhr\xhr-plugins
 codex plugin add xhr-assistant@xhr
 ```
 
 Claude Code:
 
 ```powershell
-claude plugin marketplace add C:\Users\TyLe\work\xhr\xhr-plugins
+claude plugin marketplace add C:\work\xhr\xhr-plugins
 claude plugin install xhr-assistant@xhr
 ```
 
