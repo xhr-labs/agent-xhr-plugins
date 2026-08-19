@@ -1,0 +1,13 @@
+site_name: xHR Plugins Marketplace
+repo_url: https://github.com/xhr-labs/agent-xhr-plugins
+edit_uri: edit/main/docs
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
+
+markdown_extensions:
+  - markdown_inline_mermaid
+  - mkdocs_graphviz

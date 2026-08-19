@@ -1,0 +1,17 @@
+{
+  "name": "xhr",
+  "owner": {
+    "name": "xHR"
+  },
+  "metadata": {
+    "description": "xHR plugin catalog."
+  },
+  "plugins": [
+    {
+      "name": "xhr-assistant",
+      "source": "./plugins/xhr-assistant",
+      "description": "Use managed xHR skills and actions.",
+      "category": "productivity"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "xhr-assistant": {
+      "command": "powershell.exe",
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-Command",
+        "$server = Get-ChildItem -Path (Join-Path $env:USERPROFILE '.codex\\plugins\\cache\\*\\xhr-assistant\\*\\bin\\xhr-assistant.exe') -File | Sort-Object LastWriteTime -Descending | Select-Object -First 1; if (-not $server) { throw 'Installed xhr-assistant MCP binary was not found.' }; & $server.FullName mcp"
+      ]
+    }
+  }
+}

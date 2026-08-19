@@ -1,0 +1,9 @@
+{
+  "name": "xhr-assistant",
+  "version": "0.1.18",
+  "description": "Native xHR domain skills backed by managed read and exec MCP tools.",
+  "author": {
+    "name": "xHR"
+  },
+  "mcpServers": "./.claude-plugin/mcp.json"
+}

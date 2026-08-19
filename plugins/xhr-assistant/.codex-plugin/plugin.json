@@ -1,0 +1,29 @@
+{
+  "name": "xhr-assistant",
+  "version": "0.1.18+codex.20260819062733",
+  "description": "Native xHR domain skills backed by managed read and exec MCP tools.",
+  "author": {
+    "name": "xHR"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "xHR Assistant",
+    "shortDescription": "Use managed xHR skills and actions.",
+    "longDescription": "Navigate xHR domain skills and execute approved operations through managed read and exec tools.",
+    "developerName": "xHR",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "defaultPrompt": [
+      "Show my remaining leave balance.",
+      "Find employees with pending timesheets.",
+      "Search our company documents."
+    ]
+  },
+  "mcpServers": "./.codex-plugin/mcp.json"
+}

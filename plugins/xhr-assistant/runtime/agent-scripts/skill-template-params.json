@@ -1,0 +1,19 @@
+{
+  "add_employee_url": "/people",
+  "access_permissions_url": "/workspace/access-and-permissions",
+  "app_store_url": "/app-store",
+  "attendance_url": "/apps/attendance",
+  "company_account_url": "/workspace/company-account",
+  "custom_fields_url": "/workspace/custom-fields",
+  "documents_url": "/documents",
+  "explore_plans_url": "/workspace/explore-plans",
+  "holiday_calendars_url": "/workspace/holiday-calendars",
+  "my_profile_url": "/my-profile",
+  "people_url": "/people",
+  "timeoff_configuration_url": "/apps/leave/timeoff/configuration",
+  "timeoff_url": "/apps/leave/timeoff",
+  "work_locations_url": "/workspace/work-locations",
+  "workbench_spaces_url": "/apps/workbench/spaces",
+  "workbench_url": "/apps/workbench",
+  "workspace_url": "/workspace"
+}
