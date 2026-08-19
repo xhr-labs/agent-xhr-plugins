@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "xhr-assistant": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "server=$(find \"$HOME/.codex/plugins/cache\" -path '*/xhr-assistant/*/bin/xhr-assistant' -type f -print 2>/dev/null | sort | tail -n 1); test -n \"$server\" || { echo 'Installed xhr-assistant MCP binary was not found.' >&2; exit 1; }; exec \"$server\" mcp"
+      ]
+    }
+  }
+}
