@@ -10,48 +10,30 @@ conversation.
 Your access token stays in your operating system's secure credential store.
 It is never shared with the AI assistant or typed into chat.
 
-## 1. Pick your platform
-
-| Your computer | Use this branch |
-|---|---|
-| Windows (x64) | `release/windows-x64` |
-| macOS (Apple Silicon) | `release/macos-arm64` |
-| Linux (x64) | `release/linux-x64` |
-| Linux (arm64) | `release/linux-arm64` |
-
-The examples below use Windows. On another platform, swap in your branch
-name — and note that on macOS/Linux the program is `bin/xhr-assistant`
-(no `.exe`).
-
-## 2. Install
+## 1. Install (Cross-platform)
 
 ### Claude Code
-
 ```bash
-claude plugin marketplace add https://github.com/xhr-labs/agent-xhr-plugins#release/windows-x64
+claude plugin marketplace add https://github.com/xhr-labs/agent-xhr-plugins
 claude plugin install xhr-assistant@xhr
 ```
 
 ### OpenAI Codex
-
 ```bash
-codex plugin marketplace add https://github.com/xhr-labs/agent-xhr-plugins --ref release/windows-x64
+codex plugin marketplace add https://github.com/xhr-labs/agent-xhr-plugins
 codex plugin add xhr-assistant@xhr
 ```
 
 ### Google Antigravity (IDE or agy CLI)
-
 ```bash
-git clone --depth 1 --single-branch -b release/windows-x64 https://github.com/xhr-labs/agent-xhr-plugins
-agent-xhr-plugins/plugins/xhr-assistant/bin/xhr-assistant.exe install antigravity
+# Windows
+git clone --depth 1 https://github.com/xhr-labs/agent-xhr-plugins
+agent-xhr-plugins\plugins\xhr-assistant\bin\xhr-assistant.exe install antigravity
+
+# macOS / Linux
+git clone --depth 1 https://github.com/xhr-labs/agent-xhr-plugins
+./agent-xhr-plugins/plugins/xhr-assistant/bin/xhr-assistant install antigravity
 ```
-
-(`--depth 1 --single-branch` downloads only your platform's package instead
-of every platform.)
-
-> No git? Download the branch as a ZIP instead (**Code → Download ZIP** on
-> the branch page), extract it, and point the same commands at the extracted
-> folder.
 
 After installing, **restart your assistant** (or start a new session) so the
 xHR skills and tools load.
