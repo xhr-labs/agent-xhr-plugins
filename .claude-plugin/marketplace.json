@@ -1,0 +1,35 @@
+{
+  "name": "xhr",
+  "owner": {
+    "name": "xHR"
+  },
+  "metadata": {
+    "description": "xHR plugin catalog."
+  },
+  "plugins": [
+    {
+      "name": "xhr-assistant",
+      "source": "./plugins/xhr-assistant",
+      "description": "Use managed xHR skills and actions. (Windows)",
+      "category": "productivity"
+    },
+    {
+      "name": "xhr-assistant-macos",
+      "source": "./plugins/xhr-assistant-macos",
+      "description": "Use managed xHR skills and actions. (macOS)",
+      "category": "productivity"
+    },
+    {
+      "name": "xhr-assistant-linux-x64",
+      "source": "./plugins/xhr-assistant-linux-x64",
+      "description": "Use managed xHR skills and actions. (Linux x64)",
+      "category": "productivity"
+    },
+    {
+      "name": "xhr-assistant-linux-arm64",
+      "source": "./plugins/xhr-assistant-linux-arm64",
+      "description": "Use managed xHR skills and actions. (Linux arm64)",
+      "category": "productivity"
+    }
+  ]
+}

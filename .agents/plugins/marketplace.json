@@ -1,0 +1,60 @@
+{
+  "name": "xhr",
+  "interface": {
+    "displayName": "xHR"
+  },
+  "plugins": [
+    {
+      "name": "xhr-assistant",
+      "source": {
+        "source": "local",
+        "path": "./plugins/xhr-assistant"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity",
+      "description": "Use managed xHR skills and actions. (Windows)"
+    },
+    {
+      "name": "xhr-assistant-macos",
+      "source": {
+        "source": "local",
+        "path": "./plugins/xhr-assistant-macos"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity",
+      "description": "Use managed xHR skills and actions. (macOS)"
+    },
+    {
+      "name": "xhr-assistant-linux-x64",
+      "source": {
+        "source": "local",
+        "path": "./plugins/xhr-assistant-linux-x64"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity",
+      "description": "Use managed xHR skills and actions. (Linux x64)"
+    },
+    {
+      "name": "xhr-assistant-linux-arm64",
+      "source": {
+        "source": "local",
+        "path": "./plugins/xhr-assistant-linux-arm64"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity",
+      "description": "Use managed xHR skills and actions. (Linux arm64)"
+    }
+  ]
+}

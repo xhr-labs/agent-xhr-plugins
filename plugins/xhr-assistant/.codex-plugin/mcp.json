@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "xhr-assistant": {
+      "command": "powershell.exe",
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-Command",
+        "$server = Get-ChildItem -Path (Join-Path $env:USERPROFILE '.codex\\plugins\\cache\\*\\xhr-assistant\\0.2.6+codex.20260828165953\\bin\\xhr-assistant.exe') -File | Sort-Object FullName | Select-Object -First 1; if (-not $server) { throw 'xhr-assistant 0.2.6+codex.20260828165953 was not found in the Codex plugin cache; reinstall the plugin.' }; & $server.FullName mcp"
+      ]
+    }
+  }
+}

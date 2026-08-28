@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "xhr-assistant": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "server=$(find \"$HOME/.codex/plugins/cache\" -path '*/xhr-assistant-linux-arm64/0.2.6+codex.20260828165953/bin/xhr-assistant' -type f -print 2>/dev/null | sort | head -n 1); test -n \"$server\" || { echo 'xhr-assistant-linux-arm64 0.2.6+codex.20260828165953 was not found in the Codex plugin cache; reinstall the plugin.' >&2; exit 1; }; exec \"$server\" mcp"
+      ]
+    }
+  }
+}
