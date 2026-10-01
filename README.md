@@ -10,6 +10,23 @@ conversation.
 Your access token stays in your operating system's secure credential store.
 It is never shared with the AI assistant or typed into chat.
 
+## About the install warning
+
+During installation, your assistant may show a warning such as **"This plugin
+includes local MCP servers"** or **"Installing will grant access to everything
+on your computer."** This is expected for this plugin.
+
+xHR Assistant runs a small helper program on your own computer so it can connect
+your assistant to xHR. That helper is limited to three controlled actions:
+
+- `read` reads approved xHR instruction files that come with the plugin.
+- `exec` runs only approved xHR scripts declared by those instruction files.
+- `authenticate` opens the private xHR sign-in window.
+
+The helper is not a general-purpose command prompt for the assistant. Your xHR
+access token is stored in your operating system credential store and is not
+shown in chat.
+
 ## 1. Pick the plugin for your operating system
 
 The marketplace ships one plugin per platform. Install **only** the one that
