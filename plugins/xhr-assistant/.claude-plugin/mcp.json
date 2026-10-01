@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "xhr-assistant": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/xhr-assistant.exe",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
+}

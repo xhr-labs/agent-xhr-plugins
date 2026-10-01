@@ -1,0 +1,13 @@
+from src.shared.task_args_cli import CLI_STR
+from src.shared.skill_wrapper import run_skill_entry
+
+
+if __name__ == "__main__":
+    run_skill_entry(
+        "src.application.access_control.update_app_access",
+        [
+            {"flag": "--app", "dest": "app", "type": CLI_STR},
+            {"flag": "--groups", "dest": "groups", "type": CLI_STR},
+        ],
+        injected_task_args=globals().get("TASK_ARGS"),
+    )
